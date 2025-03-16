@@ -15,12 +15,16 @@ Design
 POJO Classes:
 To enable easy test creation and maintenance, the request and response json fields are modeled as POJO classes
 Use of Gson/Jackson annotations helps simplify the creation of classes as only the fields need to be declared
+
 Request: To create request JSON, it is sufficient to create object(s) for the corresponding request model classes and set values according to the tests. Then Object Mapper (Jackson - databind) can be used to serialize the object(s) to json before submitting API calls
+
 Response: To enable ease of access and parsing response JSON, object mapper can parse the response JSON string as object(s) of response model classes
 POJO classes can be found at src/main/java/com/automation/api/request/dto and  src/main/java/com/automation/api/response/dto package
+
 Acceptance Tests:
 Acceptance Tests written as Cucumber feature file can be found at src/test/resources/features/Booking.feature
 The tests perform a Get and Post call to APIs hosted at https://restful-booker.herokuapp.com/
+
 Assertions:
 JUnit assertion methods are used to verify response JSON data
 Prerequisites to Run the project
@@ -30,6 +34,7 @@ After cloning the project, compile using the IDE Maven plugin or mvn clean compi
 Review the code to understand the flow
 src/test/java - has the code for Cucumber tests implementation
 src/test/resources - has the feature file
+
 Command Line:
 mvn clean test - This will run the scenarios in Cucumber feature files
 
